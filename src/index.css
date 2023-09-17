@@ -5,3 +5,9 @@
 body{
     background-color: #F5F5F5;
 }
+.social-login{
+    cursor: pointer;
+}
+.social-login:hover{
+    background-color: #f7f7f7;
+}
