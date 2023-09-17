@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { PrimaryButton } from "../Buttons";
 import Text from "../Text";
 import SocialAuth from "./SocialAuth";
+import AlternateText from "./AlternateText";
 
 export default function Form() {
   return (
@@ -23,6 +24,9 @@ export default function Form() {
         </Link>
         <PrimaryButton text="Sign In" className="py-2 font-bold mt-1" />
       </AuthContainer>
+      <div className="self-center">
+        <AlternateText/>
+      </div>
     </div>
   );
 }
