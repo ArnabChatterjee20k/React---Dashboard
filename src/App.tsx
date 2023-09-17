@@ -1,7 +1,9 @@
-import React from 'react'
-
+import Form from "./components/Auth/Form";
+import { BrowserRouter } from "react-router-dom";
 export default function App() {
   return (
-    <div>App</div>
-  )
+    <BrowserRouter>
+      <Form />
+    </BrowserRouter>
+  );
 }
