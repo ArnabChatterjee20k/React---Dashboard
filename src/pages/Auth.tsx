@@ -1,15 +1,15 @@
-import React from "react";
+import Form from "../components/Auth/Form";
+import SideBanner from "../components/Auth/SideBanner";
+import useIsMobile from "../hooks/useIsMobile";
 
-type AuthProps<T extends React.ElementType> = {
-  as?: T;
-  children?: React.ReactNode;
-};
-
-export default function Auth<T extends React.ElementType>({
-  as,
-  children,
-  ...props
-}: AuthProps<T> & React.ComponentPropsWithoutRef<T>) {
-  const Component = as || "div";
-  return <Component className="bg-white" {...props}>{children}</Component>;
+export default function Auth() {
+  const isMobile = useIsMobile()
+  return (
+    <section className="flex items-start">
+      {!isMobile && <SideBanner />}
+      <div className="flex w-[100%] min-h-screen items-center justify-center">
+        <Form />
+      </div>
+    </section>
+  );
 }

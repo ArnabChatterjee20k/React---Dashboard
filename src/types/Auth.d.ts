@@ -1,3 +1,5 @@
+import React from "react";
+
 export type AuthProps<T extends React.ElementType> = {
   as?: T;
   children?: React.ReactNode;
