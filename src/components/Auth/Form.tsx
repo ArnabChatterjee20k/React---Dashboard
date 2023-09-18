@@ -6,15 +6,17 @@ import { PrimaryButton } from "../Buttons";
 import Text from "../Text";
 import SocialAuth from "./SocialAuth";
 import AlternateText from "./AlternateText";
-
+import useIsMobile from "../../hooks/useIsMobile";
+import {twMerge} from "tailwind-merge"
 export default function Form() {
+  const isMobile = useIsMobile()
   return (
     <div className="flex flex-col gap-5 px-4">
       <FormHeading />
       <SocialAuth />
       <AuthContainer
         as="form"
-        className="p-6 w-[20rem] flex flex-col gap-4 rounded-lg self-center"
+        className={twMerge("p-6 w-[25rem] flex flex-col gap-4 rounded-lg self-center",isMobile && "w-[20rem]")}
       >
         {FieldsData.map((props) => (
           <Fields {...props} />
