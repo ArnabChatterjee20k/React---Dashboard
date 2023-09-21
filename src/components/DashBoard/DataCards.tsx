@@ -3,7 +3,7 @@ import { DataCardsProps } from "../../types/DataCards";
 
 export default function DataCards() {
   return (
-    <div className="flex gap-10 w-full">
+    <div className="flex flex-col md:flex-row gap-10 w-full">
       {DataCardsData.map((data) => (
         <Card {...data} />
       ))}
@@ -14,13 +14,16 @@ export default function DataCards() {
 function Card({ Icon, heading, value, color }: DataCardsProps) {
   return (
     <div
-      className={`w-[15rem] p-7 flex flex-col rounded-3xl`}
+      className="flex w-full flex-col p-7 rounded-3xl flex-1"
       style={{ backgroundColor: color }}
     >
-      <Icon size="2em" className="self-end" />
+      <Icon
+        size="2em"
+        className="self-end"
+      />
       <div className="flex flex-col gap-1">
-        <p className="text-[15px] font-[500]">{heading}</p>
-        <p className="font-bold text-2xl">{value}</p>
+        <p className="text-[20px] md:text-[15px] lg:text-[20px] font-[500]">{heading}</p>
+        <p className="font-bold text-4xl md:text-2xl lg:text-4xl">{value}</p>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function SideNav() {
   return (
-    <aside className="min-h-screen w-[18rem] flex flex-col py-10">
+    <aside className="hidden md:flex min-h-screen w-[18rem] flex-col py-10">
       <div className="bg-black flex-1 rounded-3xl flex flex-col pl-10 py-12 gap-8 items-start">
         <h3 className="font-monteserat text-2xl text-white font-[700]">
           Target.
