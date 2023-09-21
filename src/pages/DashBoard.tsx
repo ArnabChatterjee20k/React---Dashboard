@@ -1,5 +1,5 @@
-import SideNav from "../components/DashBoard/SideNav";
 import VisualisationSpace from "../components/DashBoard/VisualisationSpace";
+import SideNav from "../layout/SideNav";
 
 export default function DashBoard() {
   return (

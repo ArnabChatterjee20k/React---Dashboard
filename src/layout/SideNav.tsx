@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Links } from "../../data/Links";
+import { Links } from "../data/Links";
 import { twMerge } from "tailwind-merge";
 
 export default function SideNav() {

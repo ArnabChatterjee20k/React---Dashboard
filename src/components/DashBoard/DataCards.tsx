@@ -22,8 +22,8 @@ function Card({ Icon, heading, value, color }: DataCardsProps) {
         className="self-end"
       />
       <div className="flex flex-col gap-1">
-        <p className="text-[20px] md:text-[15px] lg:text-[20px] font-[500]">{heading}</p>
-        <p className="font-bold text-4xl md:text-2xl lg:text-4xl">{value}</p>
+        <p className="text-[20px] md:text-[15px] max-lg:text-[20px] font-[500]">{heading}</p>
+        <p className="font-bold text-4xl md:text-2xl max-lg:text-4xl">{value}</p>
       </div>
     </div>
   );
