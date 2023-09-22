@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function MobileNav() {
   return (
-    <div className="relative block md:hidden">
+    <div className="relative block lg:hidden">
       <Menu>
         <Menu.Button className="self-end ">
           <FiMenu className="w-6 h-6" />
