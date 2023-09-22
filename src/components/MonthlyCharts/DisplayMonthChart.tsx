@@ -10,6 +10,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import CustomLegends from "../Charts/CustomLegends";
 
 ChartJS.register(
   CategoryScale,
@@ -34,25 +35,27 @@ export function DisplayMonthChart({ chartData }: MonthlyChartProps) {
   ];
 
   return (
-    <div className="w-[90%] bg-white p-6 rounded-lg flex flex-col gap-8">
+    <div className="px-5 bg-white p-6 rounded-lg flex flex-col gap-8">
       <div className="flex justify-between">
         <div className="flex flex-col items-start gap-1">
           <h5 className="font-monteserat font-bold text-xl">Activites</h5>
           <select
             name="month"
             id="month"
-            className="text-slate-400 text-[13px] -m-1"
+            className="text-slate-400 text-[13px] -m-1 bg-white"
           >
             <option value="1">May - June 2021</option>
             <option value="2">June - July 2021</option>
           </select>
         </div>
-
-        <div>
-          
+        <div className="flex gap-4 self-end">
+          {dataSet.map(({ label, borderColor }) => (
+            <CustomLegends title={label} color={borderColor} />
+          ))}
         </div>
       </div>
       <Line
+        className="max-h-[18rem]"
         title="Activities"
         options={{
           responsive: true,

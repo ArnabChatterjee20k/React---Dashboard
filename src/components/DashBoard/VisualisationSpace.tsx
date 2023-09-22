@@ -25,7 +25,7 @@ const chartsData: MonthlyChartProps = {
 
 export default function VisualisationSpace() {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col gap-7">
       <DataCards />
       <DisplayMonthChart chartData={chartsData.chartData} />
     </div>
