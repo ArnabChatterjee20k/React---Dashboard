@@ -49,7 +49,7 @@ export function DisplayMonthChart({ chartData }: MonthlyChartProps) {
         </div>
       </div>
       <Line
-        className="max-h-[18rem]"
+        className="max-h-[16rem]"
         title="Activities"
         options={{
           responsive: true,
