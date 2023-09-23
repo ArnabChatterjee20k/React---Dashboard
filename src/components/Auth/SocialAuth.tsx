@@ -2,6 +2,7 @@ import AuthContainer from "./AuthContainer";
 import Google from "../../icons/Google.png";
 import Apple from "../../icons/Apple.png";
 import Text from "../Text";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function SocialAuth() {
   return (
@@ -13,9 +14,11 @@ export default function SocialAuth() {
 }
 
 function GoogleAuth() {
+  const {loginWithRedirect,logout} = useAuth0()
   return (
     <AuthContainer
       as="button"
+      onClick={()=>loginWithRedirect()}
       className="flex items-center gap-2 px-5 py-2 rounded-md social-login"
     >
       <img src={Google} alt="" className="w-3 h-3" />
