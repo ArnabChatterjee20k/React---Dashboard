@@ -14,7 +14,7 @@ export default function SocialAuth() {
 }
 
 function GoogleAuth() {
-  const {loginWithRedirect,logout} = useAuth0()
+  const {loginWithRedirect} = useAuth0()
   return (
     <AuthContainer
       as="button"

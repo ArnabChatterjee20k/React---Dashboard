@@ -23,7 +23,7 @@ export default function MobileNav() {
           <Menu.Items className="absolute right-0 mt-4  py-2 rounded text-sm font-medium bg-black text-white">
             {Links.map(({ Icon, label, link }) => {
               return (
-                <Menu.Item className={`block px-4 py-2`}>
+                <Menu.Item as="div" className={`block px-4 py-2`}>
                   <div className="flex gap-2 items-center">
                     <Icon />
                     <Link to={link}>{label}</Link>

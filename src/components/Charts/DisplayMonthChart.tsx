@@ -73,7 +73,7 @@ export function DisplayMonthChart({ chartData }: MonthlyChartProps) {
             x: {
               grid: { display: false },
               ticks: {
-                callback: (value, index, values) => {
+                callback: (value) => {
                   // Check if the tick value is 0 and return an empty string ('') in that case
                   return value === 0 ? "" : value;
                 },

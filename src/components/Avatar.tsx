@@ -1,7 +1,7 @@
 import {useAuth0} from "@auth0/auth0-react"
 import {FaUserCircle} from "react-icons/fa"
 export default function Avatar() {
-  const {isAuthenticated,user,isLoading,logout} = useAuth0()
+  const {user,isLoading,logout} = useAuth0()
   if(isLoading) return <FaUserCircle className="inline-block h-[1.5rem] w-[1.5rem] md:h-[2rem] md:w-[2rem] rounded-full"/>
   return (
     <img

@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react"; // Import useEffect and useState
+import { useEffect } from "react"; // Import useEffect and useState
 import Text from "./Text";
 import Spinner from "./Spinner";
 
